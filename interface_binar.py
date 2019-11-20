@@ -200,17 +200,18 @@ def binar(event):
             a = pix[i, j][0]
             b = pix[i, j][1]
             c = pix[i, j][2]
-            if (a < 128):
+            k=30
+            if (a < k):
                 a = 0
-            if (b < 128):
+            if (b < k):
                 b = 0
-            if (c < 128):
+            if (c < k):
                 c = 0
-            if (a >= 128):
+            if (a >= k):
                 a = 255
-            if (b >= 128):
+            if (b >= k):
                 b = 255
-            if (c >= 128):
+            if (c >= k):
                 c = 255
             draw.point((i, j), (a, b, c))
     wpercent = (basewidth / float(image.size[0]))
